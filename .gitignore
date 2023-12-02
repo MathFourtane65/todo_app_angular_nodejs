@@ -1,0 +1,9 @@
+# Ignorer le fichier package-lock.json à la racine si nécessaire
+#/package-lock.json
+
+# Fichiers de configuration d'éditeur
+#/.vscode
+#/.idea
+
+# Autres fichiers à la racine qui ne doivent pas être suivis
+#/some-other-root-level-file
