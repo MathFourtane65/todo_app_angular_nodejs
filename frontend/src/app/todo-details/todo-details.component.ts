@@ -20,8 +20,6 @@ export class TodoDetailsComponent implements OnInit {
     const todoId = +this.route.snapshot.paramMap.get('id')!;
     this.todoService.getOne(todoId).subscribe((todo) => (this.todo = todo));
     console.log(this.todo);
-    
-    // Utilisez todoService pour charger les détails de la todo
-    // Par exemple : this.todoService.get(todoId).subscribe(todo => this.todo = todo);
   }
+  
 }
