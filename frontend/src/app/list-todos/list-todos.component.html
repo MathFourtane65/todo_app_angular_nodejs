@@ -6,6 +6,7 @@
         <th scope="col">#</th>
         <th scope="col">Title</th>
         <th scope="col">State</th>
+        <th scope="col">Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +20,7 @@
             (change)="updateState(todo)"
           />
         </td>
+        <td><a [routerLink]="['/todos', todo.id]">Détails</a></td>
       </tr>
     </tbody>
   </table>

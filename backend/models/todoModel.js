@@ -20,7 +20,8 @@ function getAll() {
 }
 
 function getOneById(id) {
-  return readTodos().find((todo) => todo.id === id);
+  const numericId = Number(id);
+  return readTodos().find((todo) => todo.id === numericId);
 }
 
 function createOne(todo) {

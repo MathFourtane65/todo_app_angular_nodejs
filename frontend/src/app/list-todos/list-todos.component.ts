@@ -4,18 +4,19 @@ import { Todo } from '../models/todo.model';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-list-todos',
   standalone: true,
-  imports: [HttpClientModule, CommonModule, FormsModule],
+  imports: [HttpClientModule, CommonModule, FormsModule, RouterLink],
   templateUrl: './list-todos.component.html',
   styleUrl: './list-todos.component.css',
 })
 export class ListTodosComponent implements OnInit {
   todos: Todo[] = [
-    { id: 0, title: 'Todo en dur 1', description: 'Description 1', state: 0 },
-    { id: 0, title: 'Todo en dur 2', description: 'Description 2', state: 1 },
+    // { id: 0, title: 'Todo en dur 1', description: 'Description 2', state: 1 },
   ];
 
   constructor(private todoService: TodoService) {}

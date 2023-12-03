@@ -16,7 +16,7 @@ function getTodoById(req, res) {
 function createTodo(req, res) {
   const todos = todoModel.getAll();
   const lastTodo = todos[todos.length - 1];
-  const newId = lastTodo ? lastTodo.id + 1 : 1; // Si aucun todo n'existe, commencez avec l'ID 1
+  const newId = lastTodo ? lastTodo.id + 1 : 1;
 
   const newTodo = { id: newId, ...req.body };
   todoModel.createOne(newTodo);
