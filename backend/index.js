@@ -1,8 +1,10 @@
 const express = require("express");
 const todoRoutes = require("./routes/todoRoutes");
+const cors = require('cors');
 const app = express();
 const port = 3000;
 
+app.use(cors());
 app.use(express.json()); // pour analyser le corps des requêtes JSON
 
 app.get("/", (req, res) => {

@@ -1,0 +1,8 @@
+.list-todos-container {
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 10px;
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 10px;
+}
