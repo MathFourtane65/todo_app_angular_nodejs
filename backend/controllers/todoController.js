@@ -15,10 +15,15 @@ function getTodoById(req, res) {
 
 function createTodo(req, res) {
   const todos = todoModel.getAll();
-  const lastTodo = todos[todos.length - 1];
-  const newId = lastTodo ? lastTodo.id + 1 : 1;
+  let newId = 1;
+
+  if (todos.length > 0) {
+    // Trouver le plus grand ID actuel et ajouter 1
+    newId = Math.max(...todos.map(todo => todo.id)) + 1;
+  }
 
   const newTodo = { id: newId, ...req.body };
+  console.log(newTodo);
   todoModel.createOne(newTodo);
   res.status(201).json(newTodo);
 }

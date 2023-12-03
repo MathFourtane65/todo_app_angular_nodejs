@@ -1,1 +1,15 @@
-<p>create-todo works!</p>
+<div class="container create-todo-container">
+    <h2>Créer une nouvelle Todo</h2>
+    <form (ngSubmit)="createTodo()">
+      <div class="mb-3">
+        <label for="todoTitle" class="form-label">Titre</label>
+        <input type="text" class="form-control" id="todoTitle" [(ngModel)]="todo.title" name="title" required>
+      </div>
+      <div class="mb-3">
+        <label for="todoDescription" class="form-label">Description</label>
+        <textarea class="form-control" id="todoDescription" [(ngModel)]="todo.description" name="description"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Créer</button>
+    </form>
+  </div>
+  

@@ -19,4 +19,12 @@ export class TodoService {
     return this.http.get<Todo>(`${this.apiUrl}/${id}`);
   }
 
+  create(todo: Todo): Observable<Todo> {
+    return this.http.post<Todo>(this.apiUrl, todo);
+  }
+
+  createOne(todo: Omit<Todo, 'id'>): Observable<Todo> {
+    return this.http.post<Todo>(this.apiUrl, todo);
+  }
+
 }
